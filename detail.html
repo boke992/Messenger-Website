@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8" />
+<title>メールひなリス画面<</title>
+<link rel="stylesheet" href="detail.css" />
+function show() {
+    var rowId = 
+        event.target.parentNode.parentNode.id;
+  //this gives id of tr whose button was clicked
+    var data = 
+document.getElementById(rowId).querySelectorAll(".row-data"); 
+  /*returns array of all elements with 
+  "row-data" class within the row with given id*/
+
+    var name = data[0].innerHTML;
+    var age = data[1].innerHTML;
+
+    alert("Name: " + name + "\nAge: " + age);
+}
+</head>
+<body>
+	<div class="topnav">
+        <a class="active" href="#送信">Home</a>
+        <a href="#receive" onclick="show()">受信 </a>
+        <a href="#inbox">全体</a>
+        <a href="#search">検索</a>
+      </div>
+    
+</body>
+</html>
